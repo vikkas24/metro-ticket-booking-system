@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · MetroGo</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="nav"><a class="logo" href="index.html"><i>M</i> MetroGo Admin</a></header>
+<div class="admin"><nav class="sidebar"><a data-tab="dash">Dashboard</a><a data-tab="users">Users</a><a data-tab="stations">Stations</a><a data-tab="bookings">Bookings</a><a id="lo2">Logout</a></nav>
+<main><div id="msg" class="msg"></div>
+<section class="panel" id="dash"><h2>Dashboard</h2><div class="grid" id="cards"></div><h3 style="margin-top:1.5rem">Recent bookings</h3><div class="card table-wrap"><table><thead><tr><th>Ticket</th><th>User</th><th>Route</th><th>Date</th><th>Pax</th><th>Total</th><th>Status</th></tr></thead><tbody id="recent"></tbody></table></div></section>
+<section class="panel" id="users"><h2>Users</h2><div class="card table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Role</th><th>Joined</th></tr></thead><tbody id="userRows"></tbody></table></div></section>
+<section class="panel" id="stations"><h2>Stations</h2><form id="stationForm" class="card"><input type="hidden" id="sid"><div class="row"><div><label for="sname">Name</label><input id="sname" required></div><div><label for="scode">Code</label><input id="scode" required></div></div>
+<div class="row"><div><label for="sline">Line</label><input id="sline"></div><div><label for="sorder">Order on line</label><input id="sorder" type="number" required></div></div>
+<label><input type="checkbox" id="sactive" checked style="width:auto"> Active</label><p><button class="btn">Save station</button></p></form>
+<div class="card table-wrap" style="margin-top:1rem"><table><thead><tr><th>Order</th><th>Name</th><th>Code</th><th>Line</th><th>Status</th><th></th></tr></thead><tbody id="stationRows"></tbody></table></div></section>
+<section class="panel" id="bookings"><h2>All bookings</h2><div class="card table-wrap"><table><thead><tr><th>Ticket</th><th>User</th><th>Route</th><th>Date</th><th>Pax</th><th>Total</th><th>Status</th></tr></thead><tbody id="bookRows"></tbody></table></div></section>
+</main></div>
+<script src="js/api.js"></script><script src="js/common.js"></script><script src="js/admin.js"></script></body></html>

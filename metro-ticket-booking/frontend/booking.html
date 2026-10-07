@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Book ticket · MetroGo</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="nav" id="nav"></header><div class="container" style="max-width:640px"><div id="msg" class="msg"></div>
+<div id="bookingView" class="card"><h2>Book a ticket</h2><div class="row"><div><label for="from">From station</label><select id="from"></select></div><div><label for="to">To station</label><select id="to"></select></div></div>
+<div class="row"><div><label for="date">Journey date</label><input id="date" type="date"></div><div><label for="pax">Passengers</label><input id="pax" type="number" min="1" max="10" value="1"></div></div>
+<p><button class="btn" id="calcBtn">Calculate Fare</button></p>
+<div class="summary"><h3>Journey summary</h3><div><span>From</span><b id="sFrom">—</b></div><div><span>To</span><b id="sTo">—</b></div><div><span>Date</span><b id="sDate">—</b></div>
+<div><span>Passengers</span><b id="sPax">—</b></div><div><span>Fare per passenger</span><b id="sFare">—</b></div><div class="total"><span>Total fare</span><b id="sTotal">—</b></div></div>
+<p><button class="btn dark" id="bookBtn" disabled>Proceed to Book</button></p></div>
+<div id="confirmView" style="display:none"><div class="metro-ticket" id="ticketCard"></div>
+<div class="actions no-print"><button class="btn" id="dlBtn">Download Ticket</button><button class="btn dark" id="printBtn">Print Ticket</button><a class="btn ghost" href="tickets.html">Back to Dashboard</a></div></div></div>
+<script src="js/api.js"></script><script src="js/common.js"></script><script src="js/booking.js"></script></body></html>
